@@ -33,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
             CometChat.login(uid, Constants.AUTH_KEY, object : CometChat.CallbackListener<User>() {
                 override fun onSuccess(p0: User?) {
                     Log.d(TAG, "Login Successful : " + p0?.toString())
-
+                    registerPushToken()
                 }
 
                 override fun onError(p0: CometChatException?) {
@@ -45,7 +45,6 @@ class LoginActivity : AppCompatActivity() {
             // User already logged in
         }
 
-        registerPushToken()
         startActivity(Intent(this@LoginActivity, ConversationsActivity::class.java))
     }
 
