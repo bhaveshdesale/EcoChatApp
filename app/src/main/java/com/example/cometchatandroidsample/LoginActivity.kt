@@ -34,6 +34,7 @@ class LoginActivity : AppCompatActivity() {
                 override fun onSuccess(p0: User?) {
                     Log.d(TAG, "Login Successful : " + p0?.toString())
                     registerPushToken()
+                    startActivity(Intent(this@LoginActivity, ConversationsActivity::class.java))
                 }
 
                 override fun onError(p0: CometChatException?) {
@@ -43,9 +44,9 @@ class LoginActivity : AppCompatActivity() {
             })
         } else {
             // User already logged in
+            Log.d(TAG, "User is already logged in: " + CometChat.getLoggedInUser())
+            startActivity(Intent(this@LoginActivity, ConversationsActivity::class.java))
         }
-
-        startActivity(Intent(this@LoginActivity, ConversationsActivity::class.java))
     }
 
     private fun registerPushToken() {

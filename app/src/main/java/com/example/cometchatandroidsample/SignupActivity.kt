@@ -37,28 +37,23 @@ class SignupActivity : AppCompatActivity() {
         CometChat.createUser(user, Constants.AUTH_KEY, object : CometChat.CallbackListener<User>() {
             override fun onSuccess(user: User) {
                 Log.d("createUser", user.toString())
-                loginUser(uid = uid)
+                CometChat.login(uid, Constants.AUTH_KEY, object : CometChat.CallbackListener<User>() {
+                    override fun onSuccess(p0: User?) {
+                        Log.d(TAG, "Login Successful : " + p0?.toString())
+                        registerPushToken()
+                        startActivity(Intent(this@SignupActivity, ConversationsActivity::class.java))
+                    }
+
+                    override fun onError(p0: CometChatException?) {
+                        Log.d(TAG, "Login failed with exception: " + p0?.message)
+                    }
+                })
             }
 
             override fun onError(e: CometChatException) {
                 Log.e("createUser", e.message ?: "Error occurred")
             }
         })
-    }
-
-    private fun loginUser(uid: String) {
-        CometChat.login(uid, Constants.AUTH_KEY, object : CometChat.CallbackListener<User>() {
-            override fun onSuccess(p0: User?) {
-                Log.d(TAG, "Login Successful : " + p0?.toString())
-                registerPushToken()
-            }
-
-            override fun onError(p0: CometChatException?) {
-                Log.d(TAG, "Login failed with exception: " + p0?.message)
-            }
-        })
-
-        startActivity(Intent(this@SignupActivity, ConversationsActivity::class.java))
     }
 
     private fun registerPushToken() {

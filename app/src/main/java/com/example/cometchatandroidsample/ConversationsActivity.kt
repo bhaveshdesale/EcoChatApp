@@ -9,7 +9,6 @@ import com.cometchat.chat.models.User
 import com.cometchat.chatuikit.conversations.ConversationsConfiguration
 import com.cometchat.chatuikit.conversationswithmessages.CometChatConversationsWithMessages
 import com.cometchat.chatuikit.messagecomposer.MessageComposerConfiguration
-import com.cometchat.chatuikit.messages.CometChatMessages
 import com.cometchat.chatuikit.messages.MessagesConfiguration
 import com.cometchat.chatuikit.shared.framework.ChatConfigurator
 import com.cometchat.chatuikit.shared.models.CometChatMessageComposerAction
@@ -19,10 +18,7 @@ class ConversationsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_conversations)
         setConversationsConfig()
-        setMessagesConfig()
-        setAttachmentOptions()
     }
 
     private fun setConversationsConfig() {
@@ -32,24 +28,19 @@ class ConversationsActivity : AppCompatActivity() {
                 .disableUsersPresence(false)
                 .disableReceipt(false)
 
-        CometChatConversationsWithMessages(this)
-            .setConversationsConfiguration(conversationsConfiguration)
-    }
+        val conversations = CometChatConversationsWithMessages(this)
 
-    private fun setMessagesConfig() {
         val messagesConfig = MessagesConfiguration()
             .setDisableTyping(true)
 
-        CometChatConversationsWithMessages(this)
-            .messagesConfiguration = messagesConfig
-    }
-
-    private fun setAttachmentOptions() {
         val messageComposerConfig = MessageComposerConfiguration()
         messageComposerConfig.attachmentOption = getAttachmentOptions()
 
-        CometChatMessages(this)
-            .setMessageComposerConfiguration(messageComposerConfig)
+        messagesConfig.messageComposerConfiguration = messageComposerConfig
+        conversations.messagesConfiguration = messagesConfig
+
+        conversations.setConversationsConfiguration(conversationsConfiguration)
+        setContentView(conversations)
     }
 
     private fun getAttachmentOptions() = fun(

@@ -8,6 +8,7 @@ import androidx.appcompat.widget.AppCompatButton
 import com.cometchat.chat.core.AppSettings
 import com.cometchat.chat.core.CometChat
 import com.cometchat.chat.exceptions.CometChatException
+import com.cometchat.chat.models.User
 import com.cometchat.chatuikit.shared.cometchatuikit.CometChatUIKit
 import com.cometchat.chatuikit.shared.cometchatuikit.UIKitSettings
 
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         initCometChatSdk()
         initCometChatUiKit()
         initEventHandlers()
+        checkLoginStatus()
     }
 
     private fun initEventHandlers() {
@@ -34,6 +36,14 @@ class MainActivity : AppCompatActivity() {
         val goToSignupBtn = this.findViewById<AppCompatButton>(R.id.go_to_signup)
         goToSignupBtn.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
+        }
+    }
+
+    private fun checkLoginStatus() {
+        if (CometChat.getLoggedInUser() != null) {
+            // User already logged in
+            Log.d(TAG, "User is already logged in: " + CometChat.getLoggedInUser())
+            startActivity(Intent(this@MainActivity, ConversationsActivity::class.java))
         }
     }
 
