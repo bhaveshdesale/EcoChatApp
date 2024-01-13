@@ -67,7 +67,6 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
     implementation("com.google.firebase:firebase-messaging:23.3.1")
 
-    implementation("com.cometchat:chat-sdk-android:4.0.3")
     implementation("com.cometchat:chat-uikit-android:4.0.4")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.10.0")

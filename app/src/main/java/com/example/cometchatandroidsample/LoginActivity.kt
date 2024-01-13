@@ -23,8 +23,10 @@ class LoginActivity : AppCompatActivity() {
     private fun initEventHandlers() {
         val loginButton = this.findViewById<AppCompatButton>(R.id.login_button)
         loginButton.setOnClickListener {
-            val uid = this.findViewById<TextInputEditText>(R.id.userId)
-            login(uid = uid.text.toString())
+            val username = this.findViewById<TextInputEditText>(R.id.userId)
+            // use password while logging in to your backend system
+            val password = this.findViewById<TextInputEditText>(R.id.passwordInput)
+            login(uid = username.text.toString())
         }
     }
 

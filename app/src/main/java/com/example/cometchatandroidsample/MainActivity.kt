@@ -5,10 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
-import com.cometchat.chat.core.AppSettings
 import com.cometchat.chat.core.CometChat
 import com.cometchat.chat.exceptions.CometChatException
-import com.cometchat.chat.models.User
 import com.cometchat.chatuikit.shared.cometchatuikit.CometChatUIKit
 import com.cometchat.chatuikit.shared.cometchatuikit.UIKitSettings
 
@@ -21,7 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initCometChatSdk()
         initCometChatUiKit()
         initEventHandlers()
         checkLoginStatus()
@@ -45,29 +42,6 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "User is already logged in: " + CometChat.getLoggedInUser())
             startActivity(Intent(this@MainActivity, ConversationsActivity::class.java))
         }
-    }
-
-    private fun initCometChatSdk() {
-        val appSettings = AppSettings.AppSettingsBuilder()
-            .subscribePresenceForAllUsers()
-            .setRegion(Constants.REGION)
-            .autoEstablishSocketConnection(true)
-            .build()
-
-        CometChat.init(
-            this,
-            Constants.APP_ID,
-            appSettings,
-            object : CometChat.CallbackListener<String>() {
-                override fun onSuccess(p0: String?) {
-                    Log.d(TAG, "Initialization completed successfully")
-                }
-
-                override fun onError(p0: CometChatException?) {
-                    Log.d(TAG, "Initialization failed with exception: " + p0?.message)
-                }
-
-            })
     }
 
     private fun initCometChatUiKit() {

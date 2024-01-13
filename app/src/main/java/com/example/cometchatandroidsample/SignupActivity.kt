@@ -9,6 +9,7 @@ import com.cometchat.chat.core.CometChat
 import com.cometchat.chat.exceptions.CometChatException
 import com.cometchat.chat.models.User
 import com.google.android.material.textfield.TextInputEditText
+import org.json.JSONObject
 
 class SignupActivity : AppCompatActivity() {
 
@@ -23,16 +24,25 @@ class SignupActivity : AppCompatActivity() {
     private fun initEventHandlers() {
         val loginButton = this.findViewById<AppCompatButton>(R.id.signup_button)
         loginButton.setOnClickListener {
-            val uid = this.findViewById<TextInputEditText>(R.id.userId)
-            val username = this.findViewById<TextInputEditText>(R.id.username)
-            createUser(uid = uid.text.toString(), name = username.text.toString())
+            val username = this.findViewById<TextInputEditText>(R.id.userId)
+            val name = this.findViewById<TextInputEditText>(R.id.nameInput)
+            val email = this.findViewById<TextInputEditText>(R.id.emailInput)
+            // use password while registering with your backend system
+            val password = this.findViewById<TextInputEditText>(R.id.passwordInput)
+            createUser(uid = username.text.toString(),
+                name = name.text.toString(),
+                email = email.text.toString())
         }
     }
 
-    private fun createUser(uid: String, name: String) {
+    private fun createUser(uid: String,
+                           name: String,
+                           email: String) {
         val user = User()
         user.uid = uid
         user.name = name
+
+        user.metadata = JSONObject().put("email", email)
 
         CometChat.createUser(user, Constants.AUTH_KEY, object : CometChat.CallbackListener<User>() {
             override fun onSuccess(user: User) {
