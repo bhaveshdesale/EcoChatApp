@@ -50,7 +50,6 @@ class SignupActivity : AppCompatActivity() {
                 CometChat.login(uid, Constants.AUTH_KEY, object : CometChat.CallbackListener<User>() {
                     override fun onSuccess(p0: User?) {
                         Log.d(TAG, "Login Successful : " + p0?.toString())
-                        registerPushToken()
                         startActivity(Intent(this@SignupActivity, ConversationsActivity::class.java))
                     }
 
@@ -64,22 +63,5 @@ class SignupActivity : AppCompatActivity() {
                 Log.e("createUser", e.message ?: "Error occurred")
             }
         })
-    }
-
-    private fun registerPushToken() {
-        MyFirebaseMessagingService.token?.let {
-            CometChat
-                .registerTokenForPushNotification(
-                    it,
-                    object : CometChat.CallbackListener<String?>() {
-                        override fun onSuccess(s: String?) {
-
-                        }
-
-                        override fun onError(e: CometChatException) {
-                            Log.e(TAG, e.message ?: "Error occurred")
-                        }
-                    })
-        }
     }
 }
