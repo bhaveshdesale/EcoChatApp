@@ -33,8 +33,7 @@
             android:id="@+id/userId"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
-            android:textColor="@color/textColorWhite" />
+            android:padding="16dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -43,7 +42,6 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#efeef3"
         android:hint="Enter Password"
-        app:hintTextColor="@color/light_grey"
         android:layout_margin="12dp"
         app:boxBackgroundMode="filled">
 
@@ -52,8 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:inputType="textPassword"
-            android:textColor="@color/textColorWhite" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -62,7 +59,5 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:layout_margin="12dp"
-        android:textColor="@color/white"
-        app:elevation="0dp"
-        app:rippleColor="@color/light_grey" />
+        app:elevation="0dp" />
 </LinearLayout>

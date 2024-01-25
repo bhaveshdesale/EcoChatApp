@@ -82,8 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            android:inputType="textPassword"
-            android:textColor="@color/textColorWhite" />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
@@ -92,7 +91,5 @@
         android:layout_height="wrap_content"
         android:text="Sign Up"
         android:layout_margin="12dp"
-        android:textColor="@color/white"
-        app:elevation="0dp"
-        app:rippleColor="@color/light_grey" />
+        app:elevation="0dp" />
 </LinearLayout>
