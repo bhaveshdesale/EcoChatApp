@@ -5,6 +5,7 @@ package com.example.cometchatandroidsample.data
  * @param <T>
  */
 sealed class Result<out T : Any> {
+    //This is data class
 
     data class Success<out T : Any>(val data: T) : Result<T>()
     data class Error(val exception: Exception) : Result<Nothing>()

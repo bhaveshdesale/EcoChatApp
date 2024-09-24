@@ -12,7 +12,6 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.cometchat.chat.helpers.CometChatHelper
 import com.cometchat.chat.models.BaseMessage
-import com.cometchat.chatuikit.R
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import org.json.JSONException
@@ -30,7 +29,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
         token = s
         Log.d(TAG, "onNewToken: $s")
     }
-
+//This is function
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         try {
             count++
@@ -72,7 +71,7 @@ class MyFirebaseMessagingService : FirebaseMessagingService() {
                 .setContentTitle(json!!.getString("title"))
                 .setContentText(json!!.getString("alert"))
                 .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .setColor(resources.getColor(R.color.colorPrimary))
+                .setColor(resources.getColor(R.color.white))
                 .setLargeIcon(getBitmapFromURL(baseMessage.sender.avatar))
                 .setGroup(GROUP_ID)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)

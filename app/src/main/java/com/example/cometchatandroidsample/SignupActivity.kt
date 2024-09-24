@@ -22,13 +22,13 @@ class SignupActivity : AppCompatActivity() {
     }
 
     private fun initEventHandlers() {
-        val loginButton = this.findViewById<AppCompatButton>(R.id.signup_button)
+        val loginButton = this.findViewById<AppCompatButton>(R.id.signup_button1)
         loginButton.setOnClickListener {
-            val username = this.findViewById<TextInputEditText>(R.id.userId)
-            val name = this.findViewById<TextInputEditText>(R.id.nameInput)
-            val email = this.findViewById<TextInputEditText>(R.id.emailInput)
+            val username = this.findViewById<TextInputEditText>(R.id.userId1)
+            val name = this.findViewById<TextInputEditText>(R.id.nameInput1)
+            val email = this.findViewById<TextInputEditText>(R.id.emailInput1)
             // use password while registering with your backend system
-            val password = this.findViewById<TextInputEditText>(R.id.passwordInput)
+            val password = this.findViewById<TextInputEditText>(R.id.passwordInput1)
             createUser(uid = username.text.toString(),
                 name = name.text.toString(),
                 email = email.text.toString())

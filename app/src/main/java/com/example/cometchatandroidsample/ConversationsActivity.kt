@@ -20,7 +20,7 @@ class ConversationsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setConversationsConfig()
     }
-
+//This is function
     private fun setConversationsConfig() {
         val conversationsConfiguration: ConversationsConfiguration? =
             ConversationsConfiguration()

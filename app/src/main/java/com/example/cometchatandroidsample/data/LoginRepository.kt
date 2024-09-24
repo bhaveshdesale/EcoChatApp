@@ -8,6 +8,7 @@ import com.example.cometchatandroidsample.data.model.LoggedInUser
  */
 
 class LoginRepository(val dataSource: LoginDataSource) {
+    //This is class loginRepository
 
     // in-memory cache of the loggedInUser object
     var user: LoggedInUser? = null

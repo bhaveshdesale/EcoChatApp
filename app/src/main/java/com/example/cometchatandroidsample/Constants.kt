@@ -1,5 +1,5 @@
 package com.example.cometchatandroidsample
-
+//This is constants
 class Constants {
     companion object {
         val APP_ID ="2639599ed7ecb0fb"

@@ -21,11 +21,11 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun initEventHandlers() {
-        val loginButton = this.findViewById<AppCompatButton>(R.id.login_button)
+        val loginButton = this.findViewById<AppCompatButton>(R.id.login_button1)
         loginButton.setOnClickListener {
-            val username = this.findViewById<TextInputEditText>(R.id.userId)
+            val username = this.findViewById<TextInputEditText>(R.id.userId1)
             // use password while logging in to your backend system
-            val password = this.findViewById<TextInputEditText>(R.id.passwordInput)
+            val password = this.findViewById<TextInputEditText>(R.id.passwordInput1)
             login(uid = username.text.toString())
         }
     }

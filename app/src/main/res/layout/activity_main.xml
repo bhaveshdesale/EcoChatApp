@@ -13,7 +13,7 @@
         android:textSize="32dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/go_to_signup"
+        android:id="@+id/go_to_signup1"
         android:layout_margin="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:textSize="18dp" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/go_to_login"
+        android:id="@+id/go_to_login1"
         android:layout_margin="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

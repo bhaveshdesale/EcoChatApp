@@ -25,12 +25,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initEventHandlers() {
-        val goToLoginBtn = this.findViewById<AppCompatButton>(R.id.go_to_login)
+        val goToLoginBtn = this.findViewById<AppCompatButton>(R.id.go_to_login1)
         goToLoginBtn.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        val goToSignupBtn = this.findViewById<AppCompatButton>(R.id.go_to_signup)
+        val goToSignupBtn = this.findViewById<AppCompatButton>(R.id.go_to_signup1)
         goToSignupBtn.setOnClickListener {
             startActivity(Intent(this, SignupActivity::class.java))
         }
