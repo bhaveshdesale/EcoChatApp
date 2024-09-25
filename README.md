@@ -40,3 +40,48 @@ Before setting up **EcoChat**, ensure the following are installed:
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/bhaveshdesale/EcoChatApp.git
+
+   Open the Project:
+
+2. **Open the cloned repository in Android Studio.**
+   
+3. **Configure Firebase:**
+
+-*Create a Firebase project.
+-*Download the google-services.json file and place it in the app directory.
+-*Set up Firebase Cloud Messaging (FCM) for push notifications.
+-*Install Dependencies: In the build.gradle file, ensure the following dependencies are included:
+
+4. **gradle**
+Copy code
+implementation 'com.cometchat:pro-android-chat-sdk:3.x.x'
+implementation 'com.google.firebase:firebase-messaging:23.0.0
+
+5.**Run the App:**
+
+6.**Connect an Android device or use an emulator.**
+Build and run the project by pressing the green play button in Android Studio.
+
+7.**📑 Additional Documentation**
+Splash Screen
+Description: The app launches with a splash screen showcasing the EcoChat logo and the slogan “Chat to Save Nature”.
+Technology: Implemented using a Handler and Intent to transition to the main activity after a 3-second delay.
+
+8.**User Interface Breakdown:**
+MainActivity: The central hub for users to access chat rooms, view profiles, and explore eco-friendly tips.
+Login/Signup: Firebase-powered secure authentication to handle user logins and registrations.
+ConversationsActivity: A robust chat interface for real-time messaging and media sharing.
+
+9.**🎥 Demo Video**
+Check out our demo video highlighting EcoChat’s main features: 👉 EcoChat Demo
+
+10.**🛠️ Future Improvements**
+Dark Mode Support: Allow users to toggle between light and dark themes.
+Multi-Language Support: Add support for multiple languages to cater to a global audience.
+Group Video Calls: Integrate video calling functionality using CometChat’s video SDK to enable face-to-face conversations.
+
+11.**🤝 Contributing**
+We welcome contributions to enhance EcoChat! Feel free to submit a pull request or report an issue in the repository.
+
+12.**📄 License**
+This project is licensed under the MIT License - see the LICENSE file for details.
