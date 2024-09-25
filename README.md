@@ -1,4 +1,4 @@
-🌍 EcoChat - Chat to Save Nature 🌿
+<bold>🌍 EcoChat - Chat to Save Nature 🌿</bold>
 Welcome to EcoChat, an innovative messaging platform designed to create a community of eco-conscious individuals. Share ideas, discuss sustainable living, and promote environmental well-being through real-time conversations.
 
 
