@@ -77,13 +77,15 @@ Check out our demo video highlighting EcoChat’s main features:
 
 https://github.com/user-attachments/assets/488eed63-825d-4a62-80b8-b2242e11c499
 
-Uploading WhatsApp Video 2024-09-26 at 2.40.07 AM.mp4…
-
-Uploading WhatsApp Video 2024-09-26 at 2.40.08 AM.mp4…
+https://github.com/user-attachments/assets/bd8affd5-d18d-461d-a603-acc4a3db05d2
 
 
-Uploading WhatsApp Video 2024-09-26 at 2.40.44 AM.mp4…
 
+
+Uploading WhatsApp Video 2024-09-26 at 2.40.07 AM (1).mp4…
+
+
+Uploading WhatsApp Video 2024-09-26 at 2.40.08 AM (1).mp4…
 
 
 10.**🛠️ Future Improvements**
