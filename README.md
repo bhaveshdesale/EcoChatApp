@@ -33,7 +33,7 @@ Clone the Repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/EcoChat.git
+git clone https://github.com/bhaveshdesale/EcoChatApp.git
 Open the Project:
 
 Open the cloned repository in Android Studio.
