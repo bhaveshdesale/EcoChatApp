@@ -52,7 +52,7 @@ Before setting up **EcoChat**, ensure the following are installed:
 -*Set up Firebase Cloud Messaging (FCM) for push notifications.
 -*Install Dependencies: In the build.gradle file, ensure the following dependencies are included:
 
-4. **gradle**
+4.**gradle**
 Copy code
 implementation 'com.cometchat:pro-android-chat-sdk:3.x.x'
 implementation 'com.google.firebase:firebase-messaging:23.0.0
@@ -73,7 +73,18 @@ Login/Signup: Firebase-powered secure authentication to handle user logins and r
 ConversationsActivity: A robust chat interface for real-time messaging and media sharing.
 
 9.**🎥 Demo Video**
-Check out our demo video highlighting EcoChat’s main features: 👉 EcoChat Demo
+Check out our demo video highlighting EcoChat’s main features: 
+
+https://github.com/user-attachments/assets/488eed63-825d-4a62-80b8-b2242e11c499
+
+Uploading WhatsApp Video 2024-09-26 at 2.40.07 AM.mp4…
+
+Uploading WhatsApp Video 2024-09-26 at 2.40.08 AM.mp4…
+
+
+Uploading WhatsApp Video 2024-09-26 at 2.40.44 AM.mp4…
+
+
 
 10.**🛠️ Future Improvements**
 Dark Mode Support: Allow users to toggle between light and dark themes.
