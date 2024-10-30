@@ -13,7 +13,7 @@ dependencyResolutionManagement {
         maven(url = "https://dl.cloudsmith.io/public/cometchat/cometchat/maven/")
     }
 }
-
+//This is setting.gradle
 rootProject.name = "CometChatAndroidSample"
 include(":app")
  
